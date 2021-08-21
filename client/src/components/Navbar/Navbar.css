@@ -1,0 +1,16 @@
+.links {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 2.5vw ,3rem);
+  text-decoration: none;
+}
+.links:visited {
+  color: white
+}
+.nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  max-width: 100vw;
+}

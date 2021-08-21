@@ -1,0 +1,29 @@
+.home-screen {
+  background-image:url("../../asset/mac-book.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.home-title {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem,11vw,15rem);
+}
+
+.home-words {
+  color: white;
+  display: flex;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.5em, 3vw, 4em);
+  justify-content: space-between;
+}
+
+.home-wrap {
+  display: block
+}

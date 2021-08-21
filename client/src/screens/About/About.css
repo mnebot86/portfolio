@@ -1,0 +1,26 @@
+.about-screen {
+  background-image: url("../../asset/IMG_1781.jpg");
+  background-size: cover;
+  background-position:center;
+  min-width: 100vw;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-text {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.65);
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  font-size: 2rem;
+  height: 20vh;
+  justify-content: center;
+  left: 1%;
+  line-height: 1.6;
+  top: 9%;
+  padding: 1rem;
+  position: absolute;
+  width: 45vw;
+}
