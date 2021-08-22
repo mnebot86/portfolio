@@ -2,6 +2,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from "./screens/Home/Home";
 import About from "./screens/About/About"
 import Layout from "./components/Layout/Layout";
+import Projects from "./screens/Projects/Projects"
 import "./App.css";
 
 function App() {
@@ -14,7 +15,9 @@ function App() {
         <Route exact path = "/about">
           <About />
         </Route>
-        <Route></Route>
+        <Route exact path ="/projects">
+          <Projects />
+        </Route>
         <Route></Route>
       </Layout>
     </Switch>

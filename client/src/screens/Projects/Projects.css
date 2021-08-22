@@ -1,0 +1,55 @@
+.projects-screen {
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.mixer-card, .arthub-card, .barber-card {
+  width: 30vw;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  position: relative;
+  z-index: 1;
+
+} 
+
+.mixer-card::before {
+  content: 'MiXer';
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -50px;
+  bottom: 78%;
+  z-index: -1;
+  font-size: 7rem;
+  border-radius: 10px;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms;
+}
+
+.mixer-card:hover::before {
+bottom: 105%;
+}
+
+.mixer-card::after {
+  content: 'Mixer was my first projects. Built using HTML, CSS, Javascript, and using Axios';
+  display: block;
+  width: 30vw;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  z-index: -1;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  border-radius: 10px;
+  text-align: center;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms;
+}
+
+.mixer-card:hover::after {
+bottom: -30%;
+}
