@@ -15,6 +15,7 @@
   z-index: 1;
 
 } 
+/* Mixer */
 
 .mixer-card::before {
   content: 'MiXer';
@@ -52,4 +53,84 @@ bottom: 105%;
 
 .mixer-card:hover::after {
 bottom: -30%;
+}
+
+/* arthub */
+
+.arthub-card::before {
+  content: 'artHUB';
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -90px;
+  bottom: 78%;
+  z-index: -1;
+  font-size: 7rem;
+  border-radius: 10px;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms;
+}
+
+.arthub-card:hover::before {
+bottom: 105%;
+}
+
+.arthub-card::after {
+  content: 'ArtHub was created using React.js, Axios and AirTable as a database';
+  display: block;
+  width: 30vw;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  z-index: -1;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  border-radius: 10px;
+  text-align: center;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms;
+}
+
+.arthub-card:hover::after {
+bottom: -30%;
+}
+
+/* TheBarberShop */
+
+.barber-card::before {
+  content: 'TheBarberShop';
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -220px;
+  bottom: 78%;
+  z-index: -1;
+  font-size: 7rem;
+  border-radius: 10px;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms;
+}
+
+.barber-card:hover::before {
+bottom: 105%;
+}
+
+.barber-card::after {
+  content: 'TheBarberShop is powered by React in the front and Ruby on rails in the backend. Authentication with JWT and Bcrypt.';
+  display: block;
+  width: 30vw;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  z-index: -1;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  border-radius: 10px;
+  text-align: center;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms;
+}
+
+.barber-card:hover::after {
+bottom: -40%;
 }

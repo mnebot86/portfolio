@@ -17,15 +17,15 @@ const Projects = () => {
       </div>
       <div className="arthub-card">
         <img src={arthub} alt="arthub-photo" />
-        <div className ="arthub-disc">
+        {/* <div className ="arthub-disc">
           <p>ArtHub was created using React.js, Axios and AirTable as a database</p>
-        </div>
+        </div> */}
       </div>
       <div className="barber-card">
         <img src={barber} alt="barber-photo" />
-        <div className ="barber-disc">
+        {/* <div className ="barber-disc">
           <p>TheBarberShop is powered by React in the front and Ruby on rails in the backend. Authentication with JWT and Bcrypt.</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
