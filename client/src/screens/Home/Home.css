@@ -1,5 +1,5 @@
 .home-screen {
-  background-image:url("../../asset/mac-book.jpg");
+  background-image: url("../../asset/mac-book.jpg");
   background-size: cover;
   background-position: center;
   display: flex;
@@ -10,20 +10,63 @@
   overflow: hidden;
 }
 
-.home-title {
+.home-title p {
   color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(1rem,11vw,15rem);
+  font-family: "Playfair Display", serif;
+  font-size: clamp(1rem, 11vw, 15rem);
+}
+
+span.S {
+  display: inline-block;
+  animation: left 1s 1 ease-in-out;
+}
+
+@keyframes left {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+span.E {
+  display: inline-block;
+  animation: right 1s 1 ease-in-out;
+}
+
+@keyframes right {
+  from {
+    transform: translateX(1000px);
+  }
+  to {
+    transform: translateX(0px);
+  }
 }
 
 .home-words {
   color: white;
   display: flex;
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: clamp(1.5em, 3vw, 4em);
+  opacity: 0;
   justify-content: space-between;
+  animation: top 250ms 1s 1 ease-out forwards;
 }
 
+@keyframes top {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+  transform: translateY(0px);
+  opacity: 1;
+}
+}
 .home-wrap {
-  display: block
+  display: block;
 }
