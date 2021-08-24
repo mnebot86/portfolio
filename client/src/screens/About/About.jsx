@@ -31,12 +31,15 @@ const About = () => {
         </div>
       </div>
       <div className="icons">
+        <div className='icons-left'>
         <img src={html} alt="html-icon" />
         <img src={css} alt="css-icon" />
         <img src={js} alt="js-icon" />
         <img src={mongoDB} alt="mongoDB-icon" />
-        <img src={react} alt="react-icon" />
+        <img className="react-icon"src={react} alt="react-icon" />
         <img src={ruby} alt="ruby-icon" />
+        </div>
+        <div className="icons-right">
         <img src={rails} alt="rails-icon" />
         <img src={figma} alt="figma-icon" />
         <img src={git} alt="git-icon" />
@@ -44,6 +47,8 @@ const About = () => {
         <img src={postman} alt="postman-icon" />
         <img src={heroku} alt="heroku-icon" />
       </div>
+        </div>
+          
     </div>
   );
 };

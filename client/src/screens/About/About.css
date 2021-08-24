@@ -1,6 +1,6 @@
 .about-screen {
   background-size: cover;
-  background-position:center;
+  background-position: center;
   min-width: 100vw;
   min-height: 92vh;
   position: relative;
@@ -9,7 +9,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
 }
 
 .about-text {
@@ -18,40 +17,161 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(1.2rem,2vw,3rem);
+  font-size: clamp(1.5rem, 2.7vw, 3rem);
   line-height: 1.6;
   width: 100%;
-  padding: 5rem
+  padding: 5rem;
+  transform-origin: top right;
+  transform: scale(0,0);
+  animation: slide-out 500ms 750ms 1 ease-out forwards;
 }
 
+@keyframes slide-out {
+  from {
+    transform: scale(0,0);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+
+.react-icon{
+  animation: spin 5s 2s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .card {
   box-sizing: border-box;
   padding: 5rem;
   display: flex;
 }
-.card img{
+.card img {
   border-radius: 6%;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  transform: scale(4);
+  animation: size-down 1s 1 ease-in-out forwards;
+}
+
+@keyframes size-down {
+  from {
+    transform: scale(4);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 .family-pic {
-  
   width: 80vw;
 }
-.icons {
-display: flex;
-width: 5rem;
-justify-content: center;
+div.icons {
+  opacity: 0;
+  display: inline-block;
+  width: 5%;
+  animation: slide-up 500ms 1.3s 1 ease-out forwards;
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.icons-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.icons-right {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
-  width: 100%
+  width: 100%;
 }
-
-@media screen and (max-width:480px) {
+@media screen and (max-width: 781px) {
   .card {
+    align-items: center;
     box-sizing: border-box;
-    padding: 5rem;
+    padding:0;
     display: flex;
     flex-direction: column;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 2.5rem;
+  }
+  .icons {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2rem 0rem;
+  }
+  .icons-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .icons-right {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card {
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-text {
+    width: 100%;
+    text-align: center;
+    padding: 2.5rem;
+  }
+  .icons {
+    display:flex;
+    flex-wrap: wrap;
+    gap: 2rem 0rem;
+  }
+  .icons-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  .icons-right {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }

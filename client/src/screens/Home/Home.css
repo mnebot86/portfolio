@@ -70,3 +70,16 @@ span.E {
 .home-wrap {
   display: block;
 }
+
+@media screen and (max-width: 781px) {
+  .home-screen {
+    min-height: 94.3vh;
+  }
+}
+
+@media screen and (max-width: 481px) {
+  .home-screen {
+    min-height: 91.8vh;
+  }
+}
+
