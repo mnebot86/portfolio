@@ -1,0 +1,93 @@
+.contact-screen {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* .contact-outer {
+  padding: 5rem;
+  align-items: center;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+} */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem 0;
+}
+
+input[type="text"], input[type="email"], textarea[type="text"]{
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  width: 100%;
+  padding: 1.2rem;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+  
+}
+
+textarea[type="text"] {
+  resize:none
+}
+
+.contact-form button[type="submit"] {
+  align-self: center;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  padding: 1rem;
+  border: none;
+  border-radius: .6rem;
+  background: black;
+  color: white;
+
+}
+
+.contact-header{
+  font-size: clamp(1.5rem,2.5vw,3rem);
+  margin-bottom: 10rem;
+}
+
+.form-container{
+  display: flex;
+  width: 70vw;
+  justify-content: space-between;
+}
+
+.form-container img {
+  width: 20vw;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+  .contact-screen{
+    overflow: visible;
+  }
+
+  .contact-header{
+  text-align: center;
+  font-size: clamp(1.5rem,2.5vw,3rem);
+  margin-bottom: 4rem;
+  margin-top: 25rem;
+}
+  .form-container {
+    padding-bottom: 5rem;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .form-container img {
+    width: 100%;
+  }
+  
+}

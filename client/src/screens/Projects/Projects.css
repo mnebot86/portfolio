@@ -4,152 +4,466 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: baseline;
+  align-items: center;
   gap: 3rem;
 }
 
-.mixer-card, .arthub-card, .barber-card {
-  max-width: 30vw;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+.mixer-card,
+.arthub-card,
+.barber-card {
+  width: 30vw;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   position: relative;
-  margin-top: 10%;
+  /* margin-top: 10%; */
   z-index: 1;
-
-} 
+}
 /* Mixer */
 
 .mixer-card::before {
-  content: 'MiXer';
+  content: "MiXer";
   display: block;
   position: absolute;
   left: 50%;
   margin-left: -50px;
   bottom: 78%;
   z-index: -1;
-  font-size: 7rem;
+  font-size: clamp(2rem, 5vw, 7rem);
   opacity: 0;
   transform-origin: bottom;
-  transition: 
-  bottom  ease-out 250ms,
-  opacity  ease-out 250ms;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .mixer-card:hover::before {
-bottom: 105%;
-opacity: 1;
+  bottom: 105%;
+  opacity: 1;
 }
 
 .mixer-card::after {
-  content: 'Mixer was my first projects. Built using HTML, CSS, Javascript, and using Axios';
+  content: "Mixer was my first projects. Built using HTML, CSS, Javascript, and using Axios";
   display: block;
   width: 30vw;
   position: absolute;
   left: 0;
   bottom: 0%;
   z-index: -1;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   opacity: 0;
   line-height: 1.2;
   text-align: center;
   transform-origin: bottom;
-  transition: 
-  bottom ease-out 250ms,
-  opacity ease-out 250ms;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .mixer-card:hover::after {
-bottom: -30%;
+  bottom: -30%;
+  opacity: 1;
+}
+
+.mixer-button-wrap, .arthub-button-wrap, .barber-button-wrap {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  /* background-color: rgba(0, 0, 0, 0.30); */
+  position: absolute;
+  z-index: 3;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  min-width: 70%;
+  min-height: 70%;
+  opacity: 0;
+  transition: opacity ease-out 500ms;
+
+}
+
+.mixer-button-wrap:hover, .arthub-button-wrap:hover, .barber-button-wrap:hover{
 opacity: 1;
+
+}
+.projects-btn {
+  width: max-content;
+  padding: .5rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
+  background-color: #ffff;
 }
 
 /* arthub */
 
 .arthub-card::before {
-  content: 'artHUB';
+  content: "artHUB";
   display: block;
   position: absolute;
   left: 50%;
   margin-left: -90px;
   bottom: 78%;
   z-index: -1;
-  font-size: 7rem;
+  font-size: clamp(2rem, 5vw, 7rem);
   opacity: 0;
   transform-origin: bottom;
-  transition: 
-  bottom ease-out 250ms,
-  opacity ease-out 250ms;;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .arthub-card:hover::before {
-bottom: 105%;
-opacity: 1;
+  bottom: 105%;
+  opacity: 1;
 }
 
 .arthub-card::after {
-  content: 'ArtHub was created using React.js, Axios and AirTable as a database';
+  content: "ArtHub was created using React.js, Axios and AirTable as a database";
   display: block;
   width: 30vw;
   position: absolute;
   left: 0;
   bottom: 0%;
   z-index: -1;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   opacity: 0;
   line-height: 1.2;
   text-align: center;
   transform-origin: bottom;
-  transition: 
-  bottom ease-out 250ms,
-  opacity ease-out 250ms;;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .arthub-card:hover::after {
-bottom: -30%;
-opacity: 1;
+  bottom: -30%;
+  opacity: 1;
 }
 
 /* TheBarberShop */
 
 .barber-card::before {
-  content: 'TheBarberShop';
+  content: "TheBarberShop";
   display: block;
   position: absolute;
   left: 50%;
   margin-left: -220px;
   bottom: 78%;
   z-index: -1;
-  font-size: 7rem;
+  font-size: clamp(2rem, 5vw, 7rem);
   opacity: 0;
   transform-origin: bottom;
-  transition: 
-  bottom ease-out 250ms,
-  opacity ease-out 250ms;;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .barber-card:hover::before {
-bottom: 105%;
-opacity: 1;
+  bottom: 105%;
+  opacity: 1;
 }
 
 .barber-card::after {
-  content: 'TheBarberShop is powered by React in the front and Ruby on rails in the backend. Authentication with JWT and Bcrypt.';
+  content: "TheBarberShop is powered by React in the front and Ruby on rails in the backend. Authentication with JWT and Bcrypt.";
   display: block;
   width: 30vw;
   position: absolute;
   left: 0;
   bottom: 0%;
   z-index: -1;
-  font-size: 2.5rem;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   opacity: 0;
   line-height: 1.2;
   text-align: center;
   transform-origin: bottom;
-  transition: 
-  bottom ease-out 250ms,
-  opacity ease-out 250ms;;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .barber-card:hover::after {
-bottom: -40%;
-opacity: 1;
+  bottom: -40%;
+  opacity: 1;
+}
+@media screen and (max-width: 1200px) {
+  .projects-screen {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 2rem;
+  }
+
+  .mixer-card,
+  .arthub-card,
+  .barber-card {
+    width: 30vw;
+    /* margin-bottom: 10rem; */
+  }
+
+  /* Mixer */
+  
+  .mixer-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+
+  .mixer-card::after {
+    width: 30vw;
+  }
+
+  .mixer-card:hover::after {
+    bottom: -60%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  /* arthub */
+
+  .arthub-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .arthub-card::after {
+    width: 30vw;
+  }
+
+  .arthub-card:hover::after {
+    bottom: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  /* TheBarberShop */
+
+  .barber-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .barber-card:hover::before {
+    bottom: 105%;
+  }
+
+  .barber-card::after {
+    width: 30vw;
+  }
+
+  .barber-card:hover::after {
+    bottom: -80%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+}
+@media screen and (max-width: 1024px) {
+    .projects-screen {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    .mixer-card,
+    .arthub-card,
+    .barber-card {
+      width: 80vw;
+      margin-bottom: 10rem;
+    }
+  
+    /* Mixer */
+    .mixer-card {
+      margin-top: 8rem;
+    }
+    .mixer-card::before {
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 0;
+    }
+  
+    .mixer-card::after {
+      width: 80vw;
+    }
+  
+    .mixer-card:hover::after {
+      bottom: -15%;
+    }
+  
+    /* arthub */
+  
+    .arthub-card::before {
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 0px;
+    }
+  
+    .arthub-card::after {
+      width: 80vw;
+    }
+  
+    .arthub-card:hover::after {
+      bottom: -15%;
+    }
+  
+    /* TheBarberShop */
+  
+    .barber-card::before {
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 0px;
+    }
+  
+    .barber-card:hover::before {
+      bottom: 105%;
+    }
+  
+    .barber-card::after {
+      width: 80vw;
+    }
+  
+    .barber-card:hover::after {
+      bottom: -20%;
+      opacity: 1;
+    }
+}
+@media screen and (max-width: 768px) {
+  .projects-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mixer-card,
+  .arthub-card,
+  .barber-card {
+    max-width: 80vw;
+    margin-bottom: 10rem;
+  }
+
+  /* Mixer */
+  .mixer-card {
+    margin-top: 8rem;
+  }
+  .mixer-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+
+  .mixer-card::after {
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .mixer-card:hover::after {
+    bottom: -30%;
+  }
+
+  /* arthub */
+
+  .arthub-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .arthub-card::after {
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .arthub-card:hover::after {
+    bottom: -25%;
+  }
+
+  /* TheBarberShop */
+
+  .barber-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .barber-card:hover::before {
+    bottom: 105%;
+  }
+
+  .barber-card::after {
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .barber-card:hover::after {
+    bottom: -29%;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .projects-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mixer-card,
+  .arthub-card,
+  .barber-card {
+    width: 80vw;
+    margin-bottom: 10rem;
+  }
+
+  /* Mixer */
+  .mixer-card {
+    margin-top: 5rem;
+  }
+  .mixer-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+
+  .mixer-card::after {
+    width: 80vw;
+  }
+
+  .mixer-card:hover::after {
+    bottom: -40%;
+    opacity: 1;
+  }
+
+
+  /* arthub */
+
+  .arthub-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .arthub-card::after {
+    width: 80vw;
+  }
+
+  .arthub-card:hover::after {
+    bottom: -40%;
+    opacity: 1;
+  }
+
+  /* TheBarberShop */
+
+  .barber-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .barber-card:hover::before {
+    bottom: 105%;
+    opacity: 1;
+  }
+
+  .barber-card::after {
+    width: 80vw;
+  }
+
+  .barber-card:hover::after {
+    bottom: -65%;
+    opacity: 1;
+  }
 }
