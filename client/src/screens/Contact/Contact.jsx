@@ -34,8 +34,8 @@ const Contact = () => {
     <div className="contact-screen">
       <div className="contact-header">
         <p>
-          Thank you for taking the time to look through my portfolio. Please
-          reach out to me. If you want to work together!
+          Thank you for taking the time to look through my portfolio. If you want to work together. Please
+          reach out to me! 
         </p>
       </div>
       <div className="form-container">
