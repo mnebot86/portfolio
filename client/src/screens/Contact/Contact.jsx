@@ -34,8 +34,8 @@ const Contact = () => {
     <div className="contact-screen">
       <div className="contact-header">
         <p>
-          Thank you for taking the time to look through my portfolio. If you want to work together. Please
-          reach out to me! 
+          Thank you for taking the time to look through my portfolio. If you
+          want to work together. Please reach out to me!
         </p>
       </div>
       <div className="form-container">
@@ -44,6 +44,7 @@ const Contact = () => {
         </div>
         <form className="contact-form" onSubmit={handleSubmit}>
           <input
+            required
             type="text"
             placeholder="Name"
             value={toSend.from_name}
@@ -51,6 +52,7 @@ const Contact = () => {
             onChange={handleChange}
           />
           <input
+            required
             type="email"
             placeholder="Email"
             value={toSend.to_name}
@@ -58,6 +60,7 @@ const Contact = () => {
             onChange={handleChange}
           />
           <textarea
+            required
             type="text"
             placeholder="Content"
             value={toSend.message}
