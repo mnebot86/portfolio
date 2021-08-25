@@ -1,6 +1,7 @@
 import "./Projects.css";
 import mixer from "../../asset/projects/mixer.png";
 import arthub from "../../asset/projects/arthub.png";
+import gnome from "../../asset/projects/gnome.png"
 import barber from "../../asset/projects/barbershop.png";
 
 const Projects = () => {
@@ -18,6 +19,13 @@ const Projects = () => {
         <div className ="arthub-button-wrap">
           <button className ="projects-btn" type="button" onClick={() => window.open("https://arthub-flamingos.netlify.app/", "_blank")}>Live</button>
           <button className ="projects-btn" type="button" onClick={() => window.open("https://github.com/mnebot86/arthub", "_blank")}>GitHub</button>
+        </div>
+      </div>
+      <div className="gnome-card">
+        <img src={gnome} alt="shop" />
+        <div className ="gnome-button-wrap">
+          <button className ="projects-btn" type="button" onClick={() => window.open("https://gnome-a-zon.netlify.app/", "_blank")}>Live</button>
+          <button className ="projects-btn" type="button" onClick={() => window.open("https://github.com/mnebot86/Gnome-A-zon", "_blank")}>GitHub</button>
         </div>
       </div>
       <div className="barber-card">

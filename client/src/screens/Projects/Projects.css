@@ -2,20 +2,21 @@
   min-width: 100vw;
   min-height: 100vh;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .mixer-card,
 .arthub-card,
+.gnome-card,
 .barber-card {
+  justify-self: center;
+  align-self: center;
   width: 30vw;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   position: relative;
-  /* margin-top: 10%; */
   z-index: 1;
 }
 /* Mixer */
@@ -25,17 +26,17 @@
   display: block;
   position: absolute;
   left: 50%;
-  margin-left: -50px;
+  transform: translateX(-50%);
   bottom: 78%;
   z-index: -1;
-  font-size: clamp(2rem, 5vw, 7rem);
+  font-size: clamp(2rem, 3.2vw, 7rem);
   opacity: 0;
   transform-origin: bottom;
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .mixer-card:hover::before {
-  bottom: 105%;
+  bottom: 100%;
   opacity: 1;
 }
 
@@ -60,30 +61,33 @@
   opacity: 1;
 }
 
-.mixer-button-wrap, .arthub-button-wrap, .barber-button-wrap {
+.mixer-button-wrap,
+.arthub-button-wrap,
+.gnome-button-wrap,
+.barber-button-wrap {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
-  /* background-color: rgba(0, 0, 0, 0.30); */
   position: absolute;
   z-index: 3;
-  left:50%;
-  top:50%;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
   min-width: 70%;
   min-height: 70%;
   opacity: 0;
   transition: opacity ease-out 500ms;
-
 }
 
-.mixer-button-wrap:hover, .arthub-button-wrap:hover, .barber-button-wrap:hover{
-opacity: 1;
-
+.mixer-button-wrap:hover,
+.arthub-button-wrap:hover,
+.gnome-button-wrap:hover,
+.barber-button-wrap:hover {
+  opacity: 1;
 }
 .projects-btn {
   width: max-content;
-  padding: .5rem;
+  padding: 0.5rem;
   font-size: clamp(1.5rem, 2vw, 2.5rem);
   background-color: #ffff;
 }
@@ -95,17 +99,17 @@ opacity: 1;
   display: block;
   position: absolute;
   left: 50%;
-  margin-left: -90px;
+  transform: translateX(-50%);
   bottom: 78%;
   z-index: -1;
-  font-size: clamp(2rem, 5vw, 7rem);
+  font-size: clamp(2rem, 3.2vw, 5rem);
   opacity: 0;
   transform-origin: bottom;
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
 .arthub-card:hover::before {
-  bottom: 105%;
+  bottom: 100%;
   opacity: 1;
 }
 
@@ -130,29 +134,29 @@ opacity: 1;
   opacity: 1;
 }
 
-/* TheBarberShop */
+/* Gmone-A-Zon */
 
-.barber-card::before {
-  content: "TheBarberShop";
+.gnome-card::before {
+  content: "Gnome-A-Zon";
   display: block;
   position: absolute;
   left: 50%;
-  margin-left: -220px;
+  transform: translateX(-50%);
   bottom: 78%;
   z-index: -1;
-  font-size: clamp(2rem, 5vw, 7rem);
+  font-size: clamp(2rem, 2.5vw, 5rem);
   opacity: 0;
   transform-origin: bottom;
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.barber-card:hover::before {
-  bottom: 105%;
+.gnome-card:hover::before {
+  bottom: 100%;
   opacity: 1;
 }
 
-.barber-card::after {
-  content: "TheBarberShop is powered by React in the front and Ruby on rails in the backend. Authentication with JWT and Bcrypt.";
+.gnome-card::after {
+  content: "Gnome-A-Zon was created using MongoDB, Express.js, React.js, and Node.js ";
   display: block;
   width: 30vw;
   position: absolute;
@@ -167,8 +171,50 @@ opacity: 1;
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
+.gnome-card:hover::after {
+  bottom: -25%;
+  opacity: 1;
+}
+
+/* TheBarberShop */
+
+.barber-card::before {
+  content: "TheBarberShop";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 78%;
+  z-index: -1;
+  font-size: clamp(2rem, 3.2vw, 5rem);
+  opacity: 0;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
+}
+
+.barber-card:hover::before {
+  bottom: 100%;
+  opacity: 1;
+}
+
+.barber-card::after {
+  content: "TheBarberShop is powered by React in the front and Ruby on rails in the backend. Authentication with JWT and Bcrypt.";
+  display: block;
+  width: 30vw;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  z-index: -1;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  opacity: 0;
+  line-height: 1.2;
+  text-align: center;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
+}
+
 .barber-card:hover::after {
-  bottom: -40%;
+  bottom: -20%;
   opacity: 1;
 }
 @media screen and (max-width: 1200px) {
@@ -186,7 +232,7 @@ opacity: 1;
   }
 
   /* Mixer */
-  
+
   .mixer-card::before {
     left: 50%;
     transform: translateX(-50%);
@@ -223,6 +269,29 @@ opacity: 1;
     margin-left: 0px;
   }
 
+    /* Gnome-A-Zon */
+
+    .gnome-card::before {
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 0px;
+    }
+  
+    .gnome-card:hover::before {
+      bottom: 105%;
+    }
+  
+    .gnome-card::after {
+      width: 30vw;
+    }
+  
+    .gnome-card:hover::after {
+      bottom: -80%;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: 0px;
+    }
+
   /* TheBarberShop */
 
   .barber-card::before {
@@ -247,75 +316,6 @@ opacity: 1;
   }
 }
 @media screen and (max-width: 1024px) {
-    .projects-screen {
-      display: flex;
-      flex-direction: column;
-      gap: 0;
-    }
-  
-    .mixer-card,
-    .arthub-card,
-    .barber-card {
-      width: 80vw;
-      margin-bottom: 10rem;
-    }
-  
-    /* Mixer */
-    .mixer-card {
-      margin-top: 8rem;
-    }
-    .mixer-card::before {
-      left: 50%;
-      transform: translateX(-50%);
-      margin-left: 0;
-    }
-  
-    .mixer-card::after {
-      width: 80vw;
-    }
-  
-    .mixer-card:hover::after {
-      bottom: -15%;
-    }
-  
-    /* arthub */
-  
-    .arthub-card::before {
-      left: 50%;
-      transform: translateX(-50%);
-      margin-left: 0px;
-    }
-  
-    .arthub-card::after {
-      width: 80vw;
-    }
-  
-    .arthub-card:hover::after {
-      bottom: -15%;
-    }
-  
-    /* TheBarberShop */
-  
-    .barber-card::before {
-      left: 50%;
-      transform: translateX(-50%);
-      margin-left: 0px;
-    }
-  
-    .barber-card:hover::before {
-      bottom: 105%;
-    }
-  
-    .barber-card::after {
-      width: 80vw;
-    }
-  
-    .barber-card:hover::after {
-      bottom: -20%;
-      opacity: 1;
-    }
-}
-@media screen and (max-width: 768px) {
   .projects-screen {
     display: flex;
     flex-direction: column;
@@ -324,6 +324,98 @@ opacity: 1;
 
   .mixer-card,
   .arthub-card,
+  .gnome-card,
+  .barber-card {
+    width: 80vw;
+    margin-bottom: 10rem;
+  }
+
+  /* Mixer */
+  .mixer-card {
+    margin-top: 8rem;
+  }
+  .mixer-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0;
+  }
+
+  .mixer-card::after {
+    width: 80vw;
+  }
+
+  .mixer-card:hover::after {
+    bottom: -15%;
+  }
+
+  /* arthub */
+
+  .arthub-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .arthub-card::after {
+    width: 80vw;
+  }
+
+  .arthub-card:hover::after {
+    bottom: -15%;
+  }
+
+  /* Gnome-A-Zone */
+
+  .gnome-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .gnome-card:hover::before {
+    bottom: 105%;
+  }
+
+  .gnome-card::after {
+    width: 80vw;
+  }
+
+  .gnome-card:hover::after {
+    bottom: -20%;
+    opacity: 1;
+  }
+
+  /* TheBarberShop */
+
+  .barber-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .barber-card:hover::before {
+    bottom: 105%;
+  }
+
+  .barber-card::after {
+    width: 80vw;
+  }
+
+  .barber-card:hover::after {
+    bottom: -20%;
+    opacity: 1;
+  }
+}
+@media screen and (max-width: 781px) {
+  .projects-screen {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .mixer-card,
+  .arthub-card,
+  .gnome-card,
   .barber-card {
     max-width: 80vw;
     margin-bottom: 10rem;
@@ -347,7 +439,7 @@ opacity: 1;
   }
 
   .mixer-card:hover::after {
-    bottom: -30%;
+    bottom: -18%;
   }
 
   /* arthub */
@@ -366,9 +458,32 @@ opacity: 1;
   }
 
   .arthub-card:hover::after {
-    bottom: -25%;
+    bottom: -18%;
   }
 
+  /* Gnome-A-Zon */
+
+  .gnome-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .gnome-card:hover::before {
+    bottom: 105%;
+  }
+
+  .gnome-card::after {
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .gnome-card:hover::after {
+    bottom: -18%;
+    opacity: 1;
+  }
   /* TheBarberShop */
 
   .barber-card::before {
@@ -389,7 +504,7 @@ opacity: 1;
   }
 
   .barber-card:hover::after {
-    bottom: -29%;
+    bottom: -18%;
     opacity: 1;
   }
 }
@@ -403,6 +518,7 @@ opacity: 1;
 
   .mixer-card,
   .arthub-card,
+  .gnome-card,
   .barber-card {
     width: 80vw;
     margin-bottom: 10rem;
@@ -427,7 +543,6 @@ opacity: 1;
     opacity: 1;
   }
 
-
   /* arthub */
 
   .arthub-card::before {
@@ -442,6 +557,28 @@ opacity: 1;
 
   .arthub-card:hover::after {
     bottom: -40%;
+    opacity: 1;
+  }
+
+  /* Gnome-A-zon */
+
+  .gnome-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .gnome-card:hover::before {
+    bottom: 105%;
+    opacity: 1;
+  }
+
+  .gnome-card::after {
+    width: 80vw;
+  }
+
+  .gnome-card:hover::after {
+    bottom: -65%;
     opacity: 1;
   }
 
