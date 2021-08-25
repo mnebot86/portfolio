@@ -1,3 +1,4 @@
+import { useHistory } from "react-router";
 import { useState } from "react";
 import { send } from "emailjs-com";
 import dev from "../../asset/contact-image/8.gif";
@@ -10,6 +11,8 @@ const Contact = () => {
     email: "",
     content: "",
   });
+  
+  const history = useHistory()
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
@@ -29,6 +32,8 @@ const Contact = () => {
       .catch((err) => {
         console.log("FAILED...  ", err);
       });
+
+      history.push('/')
   };
   return (
     <div className="contact-screen">
