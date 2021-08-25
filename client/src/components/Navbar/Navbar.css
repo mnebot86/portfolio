@@ -4,7 +4,7 @@
   text-decoration: none;
   position: relative;
 }
-.links:visited {
+a:visited {
   color: white;
 }
 .nav {
