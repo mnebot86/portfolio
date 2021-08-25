@@ -151,7 +151,9 @@ img {
     display: flex;
     flex-direction: column;
   }
-
+  div.icons {
+    width: 5.5rem;
+  }
   .about-text {
     width: 100%;
     text-align: center;

@@ -578,7 +578,7 @@
   }
 
   .gnome-card:hover::after {
-    bottom: -65%;
+    bottom: -40%;
     opacity: 1;
   }
 
@@ -600,7 +600,7 @@
   }
 
   .barber-card:hover::after {
-    bottom: -65%;
+    bottom: -45%;
     opacity: 1;
   }
 }
