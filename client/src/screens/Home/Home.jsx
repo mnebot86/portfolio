@@ -2,7 +2,7 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="home-screen">
+    <div id='home' className="home-screen">
       <div className ="home-wrap">
         <div className="home-title">
           <p><span className="S">Software</span> <span className="E">Engineer</span></p>

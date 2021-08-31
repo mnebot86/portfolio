@@ -6,7 +6,7 @@ import barber from "../../asset/projects/barbershop.png";
 
 const Projects = () => {
   return (
-    <div className="projects-screen">
+    <div id='projects' className="projects-screen">
       <div className="mixer-card">
         <img src={mixer} alt="drinks" />
         <div className ="mixer-button-wrap">

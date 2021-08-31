@@ -28,7 +28,7 @@ useEffect(() => {
 },[inView]);
 
   return (
-    <div  className="about-screen">
+    <div id='about' className="about-screen">
       <div className = 'card'>
         <div className="family-pic">
           <img ref={imgRef} className={inView ? 'img-animation': ''} src={family} alt="family-pic" />

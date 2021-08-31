@@ -48,7 +48,7 @@ const Contact = () => {
       history.push('/')
   };
   return (
-    <div className="contact-screen">
+    <div id='contact' className="contact-screen">
       <div ref={headerRef} className={`${inView ? 'contact-header': ''}`}>
         <p>
           Thank you for taking the time to look through my portfolio. If you
