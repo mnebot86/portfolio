@@ -16,7 +16,10 @@
   align-items: center;
   gap: 3rem 0;
   opacity: 0;
-  animation: fadeIn 1s 1 ease-in forwards;
+}
+
+.contact-animation {
+animation: fadeIn 1s 1 ease-in forwards;
 }
 
 @keyframes fadeIn {
@@ -78,6 +81,8 @@ textarea[type="text"] {
   border-left: 2px solid black;
   animation: typing 5s steps(110) 1 forwards;
 }
+
+
 @keyframes typing {
   100% {
     left: 100%;

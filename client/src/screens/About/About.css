@@ -22,8 +22,12 @@
   width: 100%;
   padding: 5rem;
   transform-origin: top right;
+}
+
+.text-animation {
   transform: scale(0,0);
   animation: slide-out 500ms 750ms 1 ease-out forwards;
+
 }
 
 @keyframes slide-out {
@@ -55,8 +59,11 @@
   border-radius: 6%;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  transform: scale(4);
-  animation: size-down 1s 1 ease-in-out forwards;
+  }
+  
+  .img-animation{
+    transform: scale(4);
+    animation: size-down 1s 1 ease-in-out forwards;
 }
 
 @keyframes size-down {
@@ -80,7 +87,11 @@ div.icons {
   opacity: 0;
   display: inline-block;
   width: 5%;
+}
+
+.icons-animation {
   animation: slide-up 500ms 1.3s 1 ease-out forwards;
+
 }
 
 @keyframes slide-up {

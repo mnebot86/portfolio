@@ -1,11 +1,23 @@
 import { useHistory } from "react-router";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { send } from "emailjs-com";
 import dev from "../../asset/contact-image/8.gif";
 import jammin from "../../asset/contact-image/designergif.gif";
 import "./Contact.css";
+import { useIntersectionObserver } from '../../useIntersectionObserve'
 
 const Contact = () => {
+  const contactRef = useRef(null)
+  const headerRef = useRef(null)
+  const [inView, entry] = useIntersectionObserver(contactRef, headerRef, {
+    threshold:0
+  })
+
+  useEffect(() => {
+    console.log(inView);
+  }, [inView]);
+
+
   const [toSend, setToSend] = useState({
     name: "",
     email: "",
@@ -37,7 +49,7 @@ const Contact = () => {
   };
   return (
     <div className="contact-screen">
-      <div className="contact-header">
+      <div ref={headerRef} className={`${inView ? 'contact-header': ''}`}>
         <p>
           Thank you for taking the time to look through my portfolio. If you
           want to work together. Please reach out to me!
@@ -47,7 +59,7 @@ const Contact = () => {
         <div className="img-container">
           <img src={dev} alt="designer-vs-developer" />
         </div>
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form ref={contactRef} className={`contact-form ${inView ? 'contact-animation': ''}`} onSubmit={handleSubmit}>
           <input
             required
             type="text"
