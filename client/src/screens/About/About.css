@@ -24,6 +24,16 @@
   transform-origin: top right;
 }
 
+.about-title{
+  text-align: center;
+  width: 100vw;
+  font-size: 10rem;
+  border-top: 3px black solid;
+  border-bottom: 3px black solid;
+  background-color: black;
+  color:white;
+}
+
 .text-animation {
   transform: scale(0,0);
   animation: slide-out 500ms 750ms 1 ease-out forwards;

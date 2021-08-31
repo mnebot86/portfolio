@@ -20,7 +20,8 @@ const imgRef = useRef(null);
 const textRef = useRef(null);
 const logoRef = useRef(null);
 const [inView, entry] = useIntersectionObserver(imgRef, textRef, logoRef, {
-  threshold: 0
+  threshold: 0,
+  // rootMargin: '200px'
 });
 
 useEffect(() => {
@@ -29,6 +30,7 @@ useEffect(() => {
 
   return (
     <div id='about' className="about-screen">
+      <h1 className='about-title'>About</h1>
       <div className = 'card'>
         <div className="family-pic">
           <img ref={imgRef} className={inView ? 'img-animation': ''} src={family} alt="family-pic" />

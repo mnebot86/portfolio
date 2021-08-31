@@ -49,6 +49,7 @@ const Contact = () => {
   };
   return (
     <div id='contact' className="contact-screen">
+      <h1 className="contact-title" >Contact</h1>
       <div ref={headerRef} className={`${inView ? 'contact-header': ''}`}>
         <p>
           Thank you for taking the time to look through my portfolio. If you

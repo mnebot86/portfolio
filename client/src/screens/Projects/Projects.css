@@ -7,6 +7,16 @@
   grid-template-rows: repeat(2, 1fr);
 }
 
+.projects-title {
+  text-align: center;
+  width: 100vw;
+  font-size: 10rem;
+  border-top: 3px black solid;
+  border-bottom: 3px black solid;
+  background-color: black;
+  color:white;
+}
+
 .mixer-card,
 .arthub-card,
 .gnome-card,
