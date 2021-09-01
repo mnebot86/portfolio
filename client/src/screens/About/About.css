@@ -96,7 +96,8 @@
 div.icons {
   opacity: 0;
   display: inline-block;
-  width: 5%;
+  width: 4.5%;
+  margin-bottom: 1.5%;
 }
 
 .icons-animation {
@@ -151,6 +152,7 @@ img {
     flex-wrap: wrap;
     gap: 2rem 0rem;
   }
+
   .icons-left {
     display: flex;
     justify-content: center;
