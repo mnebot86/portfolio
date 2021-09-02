@@ -16,6 +16,24 @@
   font-size: clamp(1rem, 11vw, 15rem);
 }
 
+.top{
+  width: 2.5%;
+  background-color: white;
+  border: 1px black solid;
+  position: fixed;
+  right: 50px;
+  bottom: 50px;
+  padding: 1rem;
+  border-radius: 50%;
+  z-index: 3;
+}
+
+.top:active{
+transform: scale(.8);}
+.top:hover{
+  background:orange;
+}
+
 span.S {
   display: inline-block;
   animation: left 1s 1 ease-in-out;

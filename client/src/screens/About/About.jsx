@@ -21,7 +21,6 @@ const textRef = useRef(null);
 const logoRef = useRef(null);
 const [inView, entry] = useIntersectionObserver(imgRef, textRef, logoRef, {
   threshold: 0,
-  // rootMargin: '200px'
 });
 
 useEffect(() => {
