@@ -36,7 +36,7 @@
 }
 
 .project-fade {
-  animation: fader 1s 1 .5s ease-in forwards;
+  animation: fader .7s 1 ease-in forwards;
   }
 
   @keyframes fader {
@@ -548,6 +548,7 @@
   .barber-card {
     width: 80vw;
     margin-bottom: 10rem;
+    align-self: center;
   }
 
   /* Mixer */
@@ -604,7 +605,7 @@
   }
 
   .gnome-card:hover::after {
-    bottom: -40%;
+    bottom: -55%;
     opacity: 1;
   }
 
@@ -626,7 +627,7 @@
   }
 
   .barber-card:hover::after {
-    bottom: -45%;
+    bottom: -65%;
     opacity: 1;
   }
 }
