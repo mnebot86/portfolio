@@ -21,8 +21,8 @@
   background-color: white;
   border: 1px black solid;
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: 3%;
+  bottom: 3%;
   padding: 1rem;
   border-radius: 50%;
   z-index: 3;
@@ -99,5 +99,6 @@ span.E {
   .home-screen {
     min-height: 94vh;
   }
+  
 }
 
