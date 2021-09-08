@@ -3,12 +3,29 @@ import "./Navbar.css";
 
 const Navbar = () => {
   return (
-    <nav className ="nav">
-      <Link to ='/'className ="links grow">Miguel</Link>
-      <Link to ='/about' className ="links grow">About</Link>
-      <Link to ='/projects' className ="links grow">Projects</Link>
-      <Link to ='/contact' className ="links grow">Contact</Link>
-      <Link to ={{pathname: 'https://docs.google.com/document/d/1yNrzNzwUCf9preQ6s3uSsZngi3RrOUnhGbmq33nrLgc/edit?usp=sharing'}} target="_blank" className ="links grow">Resumé</Link>
+    <nav id='home' className="nav">
+      <a href="#home"className="links grow">
+        Miguel
+      </a>
+      <a href="#about" className="links grow">
+        About
+      </a>
+      <a href="#projects" className="links grow">
+        Projects
+      </a>
+      <a href="#contact" className="links grow">
+        Contact
+      </a>
+      <Link
+        to={{
+          pathname:
+            "https://docs.google.com/document/d/1yNrzNzwUCf9preQ6s3uSsZngi3RrOUnhGbmq33nrLgc/edit?usp=sharing",
+        }}
+        target="_blank"
+        className="links grow"
+      >
+        Resumé
+      </Link>
     </nav>
   );
 };

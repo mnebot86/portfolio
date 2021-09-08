@@ -1,8 +1,9 @@
 import "./Home.css";
+import arrow from "../../asset/icons/icons8-chevron-96.png"
 
 const Home = () => {
   return (
-    <div className="home-screen">
+    <div  className="home-screen">
       <div className ="home-wrap">
         <div className="home-title">
           <p><span className="S">Software</span> <span className="E">Engineer</span></p>
@@ -13,7 +14,12 @@ const Home = () => {
           <p>Open Minded</p>
         </div>
       </div>
+      <a href="#home">
+      <img className="top" src={arrow} alt="top-arrow-icon" />
+      </a>
+
     </div>
+    
   );
 };
 

@@ -12,15 +12,29 @@ import github from "../../asset/icons/icons8-github.svg";
 import postman from "../../asset/icons/icons8-postman-api.svg";
 import heroku from "../../asset/icons/icons8-heroku.svg";
 import family from "../../asset/IMG_1781.jpg";
+import { useIntersectionObserver } from "../../useIntersectionObserve";
+import { useEffect, useRef } from "react";
 
 const About = () => {
+const imgRef = useRef(null);
+const textRef = useRef(null);
+const logoRef = useRef(null);
+const [inView] = useIntersectionObserver(imgRef, textRef, logoRef, {
+  threshold: 0,
+});
+
+useEffect(() => {
+  console.log(inView);
+},[inView]);
+
   return (
-    <div className="about-screen">
+    <div id='about' className="about-screen">
+      <h1 className='about-title'>About</h1>
       <div className = 'card'>
         <div className="family-pic">
-          <img src={family} alt="family-pic" />
+          <img ref={imgRef} className={inView ? 'img-animation': ''} src={family} alt="family-pic" />
         </div>
-        <div className="about-text">
+        <div className={`about-text ${inView ? 'text-animation': ""}`}>
           <p>
             I am a passionate Full Stack Developer from Providence, Rhode
             Island. I come from a background of sales. Using my skills to adapt
@@ -30,7 +44,7 @@ const About = () => {
           </p>
         </div>
       </div>
-      <div className="icons">
+      <div ref={logoRef} className={`icons ${inView ? 'icons-animation' : ''}`}>
         <div className='icons-left'>
         <img src={html} alt="html-icon" />
         <img src={css} alt="css-icon" />

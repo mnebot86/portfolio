@@ -22,20 +22,43 @@
   width: 100%;
   padding: 5rem;
   transform-origin: top right;
-  transform: scale(0,0);
+}
+
+.about-title {
+  text-align: center;
+  width: 100vw;
+  font-size: clamp(6rem, 16vw, 10rem);
+  color: black;
+  font-family: "Playfair Display", serif;
+  padding-bottom: 0.8rem;
+  position: relative;
+}
+
+.about-title::before {
+  content: '';
+  box-shadow: 5px 5px 5px 5px #888;
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 2%;
+
+}
+.text-animation {
+  transform: scale(0, 0);
   animation: slide-out 500ms 750ms 1 ease-out forwards;
 }
 
 @keyframes slide-out {
   from {
-    transform: scale(0,0);
+    transform: scale(0, 0);
   }
   to {
-    transform: scale(1,1);
+    transform: scale(1, 1);
   }
 }
 
-.react-icon{
+.react-icon {
   animation: spin 5s 2s linear infinite;
 }
 @keyframes spin {
@@ -53,14 +76,19 @@
 }
 .card img {
   border-radius: 6%;
+  opacity: 0;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.img-animation {
   transform: scale(4);
-  animation: size-down 1s 1 ease-in-out forwards;
+  animation: size-down 1s 1 0.4s ease-in-out forwards;
 }
 
 @keyframes size-down {
   from {
+    opacity: 0;
     transform: scale(4);
   }
   50% {
@@ -70,6 +98,7 @@
     transform: scale(1.2);
   }
   to {
+    opacity: 1;
     transform: scale(1);
   }
 }
@@ -79,7 +108,13 @@
 div.icons {
   opacity: 0;
   display: inline-block;
-  width: 5%;
+  /* max-width: 4.5%;
+  min-width: 10vw; */
+  width: calc(4rem + 2vw);
+  margin-bottom: 2.5%;
+}
+
+.icons-animation {
   animation: slide-up 500ms 1.3s 1 ease-out forwards;
 }
 
@@ -110,11 +145,12 @@ div.icons {
 img {
   width: 100%;
 }
-@media screen and (max-width: 781px) {
+
+@media screen and (max-width: 1274px) {
   .card {
     align-items: center;
     box-sizing: border-box;
-    padding:0;
+    padding: 0;
     display: flex;
     flex-direction: column;
   }
@@ -125,11 +161,16 @@ img {
     margin: 2rem 0;
     padding: 2.5rem;
   }
+
+  .about-title {
+    margin-bottom: 12%;
+  }
   .icons {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 2rem 0rem;
   }
+
   .icons-left {
     display: flex;
     justify-content: center;
@@ -151,16 +192,18 @@ img {
     display: flex;
     flex-direction: column;
   }
-  div.icons {
-    width: 5.5rem;
+
+  .about-title {
+    margin-bottom: 12%;
   }
+
   .about-text {
     width: 100%;
     text-align: center;
     padding: 2.5rem;
   }
   .icons {
-    display:flex;
+    display: flex;
     flex-wrap: wrap;
     gap: 2rem 0rem;
   }

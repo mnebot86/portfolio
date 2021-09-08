@@ -7,6 +7,7 @@
   align-items: center;
   min-width: 100vw;
   min-height: 92.8vh;
+  max-height: 92.8vh;
   overflow: hidden;
 }
 
@@ -14,6 +15,24 @@
   color: white;
   font-family: "Playfair Display", serif;
   font-size: clamp(1rem, 11vw, 15rem);
+}
+
+.top{
+  width: 2.5%;
+  background-color: white;
+  border: 1px black solid;
+  position: fixed;
+  right: 3%;
+  bottom: 3%;
+  padding: 1rem;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.top:active{
+transform: scale(.8);}
+.top:hover{
+  background:orange;
 }
 
 span.S {
@@ -81,5 +100,6 @@ span.E {
   .home-screen {
     min-height: 94vh;
   }
+  
 }
 
