@@ -9,7 +9,7 @@ import { useIntersectionObserver } from '../../useIntersectionObserve'
 const Contact = () => {
   const contactRef = useRef(null)
   const headerRef = useRef(null)
-  const [inView, entry] = useIntersectionObserver(contactRef, headerRef, {
+  const [inView] = useIntersectionObserver(contactRef, headerRef, {
     threshold:0
   })
 
@@ -45,7 +45,10 @@ const Contact = () => {
         console.log("FAILED...  ", err);
       });
 
-      history.push('/')
+      
+      setTimeout(() => {
+        history.go(0)
+      },300)
   };
   return (
     <div id='contact' className="contact-screen">
@@ -53,7 +56,7 @@ const Contact = () => {
       <div ref={headerRef} className={`${inView ? 'contact-header': ''}`}>
         <p>
           Thank you for taking the time to look through my portfolio. If you
-          want to work together. Please reach out to me!
+          want to work together, please reach out to me!
         </p>
       </div>
       <div className="form-container">

@@ -8,7 +8,7 @@ import barber from "../../asset/projects/barbershop.png";
 
 const Projects = () => {
   const projectRef = useRef(null)
-  const [inView, entry] = useIntersectionObserver(projectRef, {
+  const [inView] = useIntersectionObserver(projectRef, {
     threshold:0,
   })
 

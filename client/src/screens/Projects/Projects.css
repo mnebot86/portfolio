@@ -11,14 +11,22 @@
   display: inline;
   text-align: center;
   font-size: clamp(6rem, 16vw, 10rem);
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
-    rgba(0, 0, 0, 0.22) 0px 15px 12px;
   color: black;
   grid-column-start: 1;
   grid-column-end: 3;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   font-family: "Playfair Display", serif;
   padding-bottom: 2rem;
+  position: relative;
+}
+.projects-title::before {
+  content: "";
+  box-shadow: 0px 0px 5px 5px #888;
+  position: absolute;
+  width: 100vw;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 2%;
 }
 
 .mixer-card,
@@ -36,17 +44,18 @@
 }
 
 .project-fade {
-  animation: fader .7s 1 ease-in forwards;
-  }
+  animation: fader 0.7s 1 ease-in forwards;
+}
 
-  @keyframes fader {
-    0%{ 
+@keyframes fader {
+  0% {
     transform: translateY(150px);
-  }  100%{
+  }
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
-  }
+}
 /* Mixer */
 
 .mixer-card::before {
@@ -245,16 +254,20 @@
   bottom: -20%;
   opacity: 1;
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1201px) {
   .projects-screen {
     display: flex;
-    gap: 2rem;
+    flex-direction: column;
+    gap: 12rem 0;
+    padding-bottom: 18%;
   }
 
   .mixer-card,
   .arthub-card,
+  .gnome-card,
   .barber-card {
-    width: 30vw;
+    width: 50vw;
+    align-self: center;
   }
 
   /* Mixer */
@@ -264,13 +277,16 @@
     transform: translateX(-50%);
     margin-left: 0;
   }
+  .mixer-card:hover::before{
+    bottom: 110%;
+  }
 
   .mixer-card::after {
     width: 30vw;
   }
 
   .mixer-card:hover::after {
-    bottom: -60%;
+    bottom: -35%;
     left: 50%;
     transform: translateX(-50%);
     margin-left: 0px;
@@ -283,13 +299,16 @@
     transform: translateX(-50%);
     margin-left: 0px;
   }
+  .arthub-card:hover::before{
+    bottom: 110%;
+  }
 
   .arthub-card::after {
     width: 30vw;
   }
 
   .arthub-card:hover::after {
-    bottom: -50%;
+    bottom: -25%;
     left: 50%;
     transform: translateX(-50%);
     margin-left: 0px;
@@ -304,7 +323,7 @@
   }
 
   .gnome-card:hover::before {
-    bottom: 105%;
+    bottom: 110%;
   }
 
   .gnome-card::after {
@@ -312,7 +331,7 @@
   }
 
   .gnome-card:hover::after {
-    bottom: -80%;
+    bottom: -35%;
     left: 50%;
     transform: translateX(-50%);
     margin-left: 0px;
@@ -327,7 +346,7 @@
   }
 
   .barber-card:hover::before {
-    bottom: 105%;
+    bottom: 110%;
   }
 
   .barber-card::after {
@@ -335,7 +354,7 @@
   }
 
   .barber-card:hover::after {
-    bottom: -80%;
+    bottom: -45%;
     left: 50%;
     transform: translateX(-50%);
     margin-left: 0px;
@@ -445,6 +464,7 @@
   .barber-card {
     max-width: 80vw;
     margin-bottom: 10rem;
+    align-self: center;
   }
 
   /* Mixer */

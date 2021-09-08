@@ -19,7 +19,7 @@ const About = () => {
 const imgRef = useRef(null);
 const textRef = useRef(null);
 const logoRef = useRef(null);
-const [inView, entry] = useIntersectionObserver(imgRef, textRef, logoRef, {
+const [inView] = useIntersectionObserver(imgRef, textRef, logoRef, {
   threshold: 0,
 });
 
