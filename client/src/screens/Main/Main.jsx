@@ -1,15 +1,15 @@
-import './Main.css'
 import Home from '../Home/Home'
 import About from '../About/About'
 import Projects from '../Projects/Projects'
 import Contact from '../Contact/Contact'
-import React from 'react';
+import './Main.css'
+
 const Main = () => {
   return (
-    <div>
+    <div className='main'>
       <Home/>
       <About/>
-      <Projects/>
+      <Projects />
       <Contact/>
     </div>
   );

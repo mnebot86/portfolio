@@ -1,10 +1,11 @@
 .projects-screen {
-  min-width: 100vw;
-  min-height: 100vh;
-  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 0.5fr 2fr 2fr;
+  grid-template-rows: 0.5fr 2.5fr 2.5fr;
+  min-width: 100vw;
+  overflow: hidden;
+  padding-bottom: 100px;
+  position: relative;
 }
 
 .projects-title {
@@ -19,6 +20,8 @@
   padding-bottom: 2rem;
   position: relative;
 }
+
+/* line shadow over each section title */
 .projects-title::before {
   content: "";
   box-shadow: 0px 0px 5px 5px #888;
@@ -32,7 +35,8 @@
 .mixer-card,
 .arthub-card,
 .gnome-card,
-.barber-card {
+.barber-card,
+.weather-card {
   justify-self: center;
   align-self: baseline;
   width: 30vw;
@@ -72,7 +76,7 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.mixer-card:hover::before {
+.mixer-card:hover::before, .mixer-card:active::before {
   bottom: 100%;
   opacity: 1;
 }
@@ -93,7 +97,7 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.mixer-card:hover::after {
+.mixer-card:hover::after, .mixer-card:active::after {
   bottom: -30%;
   opacity: 1;
 }
@@ -101,7 +105,8 @@
 .mixer-button-wrap,
 .arthub-button-wrap,
 .gnome-button-wrap,
-.barber-button-wrap {
+.barber-button-wrap,
+.weather-button-wrap {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
@@ -117,9 +122,15 @@
 }
 
 .mixer-button-wrap:hover,
+.mixer-button-wrap:active,
 .arthub-button-wrap:hover,
+.arthub-button-wrap:active,
 .gnome-button-wrap:hover,
-.barber-button-wrap:hover {
+.gnome-button-wrap:active,
+.barber-button-wrap:hover,
+.barber-button-wrap:active,
+.weather-button-wrap:hover,
+.weather-button-wrap:active {
   opacity: 1;
 }
 .projects-btn {
@@ -145,7 +156,7 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.arthub-card:hover::before {
+.arthub-card:hover::before, .arthub-card:active::before {
   bottom: 100%;
   opacity: 1;
 }
@@ -166,7 +177,7 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.arthub-card:hover::after {
+.gnome-card:hover::before, .gnome-card:active::before {
   bottom: -30%;
   opacity: 1;
 }
@@ -187,7 +198,7 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.gnome-card:hover::before {
+.gnome-card:hover::before, .gnome-card:active::before {
   bottom: 100%;
   opacity: 1;
 }
@@ -208,7 +219,7 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.gnome-card:hover::after {
+.gnome-card:hover::after, .gnome-card:active::after {
   bottom: -25%;
   opacity: 1;
 }
@@ -229,7 +240,7 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.barber-card:hover::before {
+.barber-card:hover::before, .barber-card:active::before {
   bottom: 100%;
   opacity: 1;
 }
@@ -250,10 +261,54 @@
   transition: bottom ease-out 250ms, opacity ease-out 250ms;
 }
 
-.barber-card:hover::after {
+.barber-card:hover::after, .barber-card:active::after {
   bottom: -20%;
   opacity: 1;
 }
+
+/* Weather-Together */
+
+.weather-card::before {
+  content: "Weather-Together";
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 81%;
+  z-index: -1;
+  font-size: clamp(2rem, 3.2vw, 4rem);
+  opacity: 0;
+  white-space: nowrap;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
+}
+
+.weather-card:hover::before, .weather-card:active::before {
+  bottom: 105%;
+  opacity: 1;
+}
+
+.weather-card::after {
+  content: "Weather-Together is powered by React with Redux in the front and Firebase in the backend.";
+  display: block;
+  width: 30vw;
+  position: absolute;
+  left: 0;
+  bottom: 0%;
+  z-index: -1;
+  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  opacity: 0;
+  line-height: 1.2;
+  text-align: center;
+  transform-origin: bottom;
+  transition: bottom ease-out 250ms, opacity ease-out 250ms;
+}
+
+.weather-card:hover::after, .weather-card:active::after {
+  bottom: -20%;
+  opacity: 1;
+}
+
 @media screen and (max-width: 1201px) {
   .projects-screen {
     display: flex;
@@ -265,7 +320,8 @@
   .mixer-card,
   .arthub-card,
   .gnome-card,
-  .barber-card {
+  .barber-card,
+  .weather-card {
     width: 50vw;
     align-self: center;
   }
@@ -277,7 +333,7 @@
     transform: translateX(-50%);
     margin-left: 0;
   }
-  .mixer-card:hover::before{
+  .mixer-card:hover::before, .mixer-card:active::before {
     bottom: 110%;
   }
 
@@ -285,7 +341,7 @@
     width: 30vw;
   }
 
-  .mixer-card:hover::after {
+  .mixer-card:hover::after, .mixer-card:active::after {
     bottom: -35%;
     left: 50%;
     transform: translateX(-50%);
@@ -299,7 +355,7 @@
     transform: translateX(-50%);
     margin-left: 0px;
   }
-  .arthub-card:hover::before{
+  .arthub-card:hover::before, .arthub-card:active::before {
     bottom: 110%;
   }
 
@@ -307,7 +363,7 @@
     width: 30vw;
   }
 
-  .arthub-card:hover::after {
+  .arthub-card:hover::after, .arthub-card:active::after {
     bottom: -25%;
     left: 50%;
     transform: translateX(-50%);
@@ -322,7 +378,7 @@
     margin-left: 0px;
   }
 
-  .gnome-card:hover::before {
+  .gnome-card:hover::before, .gnome-card:active::before {
     bottom: 110%;
   }
 
@@ -330,7 +386,7 @@
     width: 30vw;
   }
 
-  .gnome-card:hover::after {
+  .gnome-card:hover::after, .gnome-card:active::after {
     bottom: -35%;
     left: 50%;
     transform: translateX(-50%);
@@ -345,7 +401,7 @@
     margin-left: 0px;
   }
 
-  .barber-card:hover::before {
+  .barber-card:hover::before, .barber-card:active::before {
     bottom: 110%;
   }
 
@@ -353,7 +409,7 @@
     width: 30vw;
   }
 
-  .barber-card:hover::after {
+  .barber-card:hover::after, .barber-card:active::after {
     bottom: -45%;
     left: 50%;
     transform: translateX(-50%);
@@ -370,7 +426,8 @@
   .mixer-card,
   .arthub-card,
   .gnome-card,
-  .barber-card {
+  .barber-card,
+  .weather-card {
     width: 80vw;
     margin-bottom: 10rem;
   }
@@ -389,7 +446,7 @@
     width: 80vw;
   }
 
-  .mixer-card:hover::after {
+  .mixer-card:hover::after, .mixer-card:active::after {
     bottom: -15%;
   }
 
@@ -405,7 +462,7 @@
     width: 80vw;
   }
 
-  .arthub-card:hover::after {
+  .arthub-card:hover::after, .arthub-card:active::after {
     bottom: -15%;
   }
 
@@ -417,7 +474,7 @@
     margin-left: 0px;
   }
 
-  .gnome-card:hover::before {
+  .gnome-card:hover::before, .gnome-card:active::before {
     bottom: 105%;
   }
 
@@ -425,7 +482,7 @@
     width: 80vw;
   }
 
-  .gnome-card:hover::after {
+  .gnome-card:hover::after, .gnome-card:active::after {
     bottom: -20%;
     opacity: 1;
   }
@@ -438,7 +495,7 @@
     margin-left: 0px;
   }
 
-  .barber-card:hover::before {
+  .barber-card:hover::before, .barber-card:active::before  {
     bottom: 105%;
   }
 
@@ -446,7 +503,28 @@
     width: 80vw;
   }
 
-  .barber-card:hover::after {
+  .barber-card:hover::after, .barber-card:active::after {
+    bottom: -20%;
+    opacity: 1;
+  }
+
+  /* Weather-Together */
+
+  .weather-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .weather-card:hover::before, .weather-card:active::before {
+    bottom: 105%;
+  }
+
+  .weather-card::after {
+    width: 80vw;
+  }
+
+  .weather-card:hover::after, .weather-card:active::after {
     bottom: -20%;
     opacity: 1;
   }
@@ -484,7 +562,7 @@
     margin-left: 0px;
   }
 
-  .mixer-card:hover::after {
+  .mixer-card:hover::after, .mixer-card:active::after {
     bottom: -18%;
   }
 
@@ -503,7 +581,7 @@
     margin-left: 0px;
   }
 
-  .arthub-card:hover::after {
+  .arthub-card:hover::after, .arthub-card:active::after {
     bottom: -18%;
   }
 
@@ -515,7 +593,7 @@
     margin-left: 0px;
   }
 
-  .gnome-card:hover::before {
+  .gnome-card:hover::before, .gnome-card:active::before {
     bottom: 105%;
   }
 
@@ -526,7 +604,7 @@
     margin-left: 0px;
   }
 
-  .gnome-card:hover::after {
+  .gnome-card:hover::after, .gnome-card:active::after {
     bottom: -18%;
     opacity: 1;
   }
@@ -538,7 +616,7 @@
     margin-left: 0px;
   }
 
-  .barber-card:hover::before {
+  .barber-card:hover::before, .barber-card:active::before {
     bottom: 105%;
   }
 
@@ -549,7 +627,31 @@
     margin-left: 0px;
   }
 
-  .barber-card:hover::after {
+  .barber-card:hover::after, .barber-card:active::after {
+    bottom: -18%;
+    opacity: 1;
+  }
+
+  /* Weather-Together */
+
+  .weather-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .weather-card:hover::before, .weather-card:active::before {
+    bottom: 105%;
+  }
+
+  .weather-card::after {
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .weather-card:hover::after, .weather-card:active::after {
     bottom: -18%;
     opacity: 1;
   }
@@ -560,6 +662,8 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    position: relative;
+    z-index: -1;
   }
 
   .mixer-card,
@@ -585,7 +689,7 @@
     width: 80vw;
   }
 
-  .mixer-card:hover::after {
+  .mixer-card:hover::after, .mixer-card:active::after {
     bottom: -40%;
     opacity: 1;
   }
@@ -602,7 +706,7 @@
     width: 80vw;
   }
 
-  .arthub-card:hover::after {
+  .arthub-card:hover::after, .arthub-card:active::after {
     bottom: -40%;
     opacity: 1;
   }
@@ -615,7 +719,7 @@
     margin-left: 0px;
   }
 
-  .gnome-card:hover::before {
+  .gnome-card:hover::before, .gnome-card:active::before {
     bottom: 105%;
     opacity: 1;
   }
@@ -624,7 +728,7 @@
     width: 80vw;
   }
 
-  .gnome-card:hover::after {
+  .gnome-card:hover::after, .gnome-card:active::after {
     bottom: -55%;
     opacity: 1;
   }
@@ -637,7 +741,7 @@
     margin-left: 0px;
   }
 
-  .barber-card:hover::before {
+  .barber-card:hover::before, .barber-card:active::before {
     bottom: 105%;
     opacity: 1;
   }
@@ -646,7 +750,29 @@
     width: 80vw;
   }
 
-  .barber-card:hover::after {
+  .barber-card:hover::after, .barber-card:active::after {
+    bottom: -65%;
+    opacity: 1;
+  }
+
+  /* Weather-Together */
+
+  .weather-card::before {
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: 0px;
+  }
+
+  .weather-card:hover::before, .weather-card:active::before {
+    bottom: 105%;
+    opacity: 1;
+  }
+
+  .weather-card::after {
+    width: 80vw;
+  }
+
+  .weather-card:hover::after, .weather-card:active::after {
     bottom: -65%;
     opacity: 1;
   }

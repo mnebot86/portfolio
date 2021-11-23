@@ -1,0 +1,35 @@
+/* Popup style */
+.video-modal-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background: #00000050;
+  top: 0%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+}
+
+.box{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1389px;
+  max-height: 714px;
+  min-width: 300px;
+  min-height: 300px;
+  width:90%;
+  height:90%;
+  margin: 0 auto;
+  height: 60%;
+  max-height: 70vh;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+};
+
+
