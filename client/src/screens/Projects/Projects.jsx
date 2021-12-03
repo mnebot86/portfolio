@@ -19,6 +19,7 @@ const Projects = () => {
 
   const projectRef = useRef(null);
   const [inView] = useIntersectionObserver(projectRef, {
+    rootMargin: '100%',
     threshold: 0,
   });
 

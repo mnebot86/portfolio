@@ -986,7 +986,7 @@
 
   .woodshop-card:hover::after,
   .woodshop-card:active::after {
-    bottom: -55%;
+    bottom: -65%;
     opacity: 1;
   }
 }
