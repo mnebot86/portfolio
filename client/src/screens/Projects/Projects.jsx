@@ -7,6 +7,7 @@ import gnome from "../../asset/projects/gnome.png";
 import barber from "../../asset/projects/barbershop.png";
 import weather from "../../asset/projects/weather-together.png";
 import VideoModal from "../../components/VideoModal/VideoModal";
+import woodshop from '../../asset/projects/woodshop.png'
 
 
 const Projects = () => {
@@ -154,6 +155,32 @@ const Projects = () => {
                 "https://github.com/mnebot86/product-club-front-end",
                 "_blank"
               )
+            }
+          >
+            GitHub
+          </button>
+        </div>
+      </div>
+      <div
+        ref={projectRef}
+        className={`woodshop-card ${inView ? "project-fade" : ""}`}
+      >
+        <img src={woodshop} alt="barbershop in Tallahassee FL" />
+        <div className="woodshop-button-wrap">
+          <button
+            className="projects-btn"
+            type="button"
+            onClick={() =>
+              window.open("https://thewoodshop.club/", "_blank")
+            }
+          >
+            Live
+          </button>
+          <button
+            className="projects-btn"
+            type="button"
+            onClick={() =>
+              window.open("https://github.com/pearllumi-developer/the-wood-shop", "_blank")
             }
           >
             GitHub
