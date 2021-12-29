@@ -6,8 +6,8 @@ import './Main.css'
 const Main = () => {
   return (
     <div className='main'>
-      <Projects />
-      {/* <About/> */}
+      <About/>
+      {/* <Projects /> */}
       {/* <Contact/> */}
     </div>
   );
