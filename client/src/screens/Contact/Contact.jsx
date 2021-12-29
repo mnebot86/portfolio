@@ -1,8 +1,8 @@
 import { useHistory } from "react-router";
 import { useState, useRef, useEffect } from "react";
 import { send } from "emailjs-com";
-import dev from "../../asset/contact-image/8.gif";
-import jammin from "../../asset/contact-image/designergif.gif";
+// import dev from "../../asset/contact-image/8.gif";
+// import jammin from "../../asset/contact-image/designergif.gif";
 import "./Contact.css";
 import { useIntersectionObserver } from '../../useIntersectionObserve'
 
@@ -61,7 +61,7 @@ const Contact = () => {
       </div>
       <div className="form-container">
         <div className="img-container">
-          <img src={dev} alt="designer-vs-developer" />
+          {/* <img src={dev} alt="designer-vs-developer" /> */}
         </div>
         <form ref={contactRef} className={`contact-form ${inView ? 'contact-animation': ''}`} onSubmit={handleSubmit}>
           <input
@@ -91,7 +91,7 @@ const Contact = () => {
           <button type="submit">Submit</button>
         </form>
         <div className="img-container">
-          <img src={jammin} alt="" />
+          {/* <img src={jammin} alt="" /> */}
         </div>
       </div>
     </div>

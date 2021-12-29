@@ -1,13 +1,13 @@
 import "./Projects.css";
 import { useIntersectionObserver } from "../../useIntersectionObserve";
 import { useEffect, useRef, useState } from "react";
-import mixer from "../../asset/projects/mixer.png";
-import arthub from "../../asset/projects/arthub.png";
-import gnome from "../../asset/projects/gnome.png";
-import barber from "../../asset/projects/barbershop.png";
-import weather from "../../asset/projects/weather-together.png";
+// import mixer from "../../asset/projects/mixer.png";
+// import arthub from "../../asset/projects/arthub.png";
+// import gnome from "../../asset/projects/gnome.png";
+// import barber from "../../asset/projects/barbershop.png";
+// import weather from "../../asset/projects/weather-together.png";
 import VideoModal from "../../components/VideoModal/VideoModal";
-import woodshop from '../../asset/projects/woodshop.png'
+// import woodshop from '../../asset/projects/woodshop.png'
 
 
 const Projects = () => {
@@ -34,7 +34,7 @@ const Projects = () => {
         ref={projectRef}
         className={`mixer-card ${inView ? "project-fade" : ""}`}
       >
-        <img src={mixer} alt="drinks" />
+        {/* <img src={mixer} alt="drinks" /> */}
         <div className="mixer-button-wrap">
           <button
             className="projects-btn"
@@ -60,7 +60,7 @@ const Projects = () => {
         ref={projectRef}
         className={`arthub-card ${inView ? "project-fade" : ""}`}
       >
-        <img src={arthub} alt="gallery" />
+        {/* <img src={arthub} alt="gallery" /> */}
         <div className="arthub-button-wrap">
           <button
             className="projects-btn"
@@ -86,7 +86,7 @@ const Projects = () => {
         ref={projectRef}
         className={`gnome-card ${inView ? "project-fade" : ""}`}
       >
-        <img src={gnome} alt="shop" />
+        {/* <img src={gnome} alt="shop" /> */}
         <div className="gnome-button-wrap">
           <button
             className="projects-btn"
@@ -112,7 +112,7 @@ const Projects = () => {
         ref={projectRef}
         className={`barber-card ${inView ? "project-fade" : ""}`}
       >
-        <img src={barber} alt="haircut" />
+        {/* <img src={barber} alt="haircut" /> */}
         <div className="barber-button-wrap">
           <button
             className="projects-btn"
@@ -139,7 +139,7 @@ const Projects = () => {
         ref={projectRef}
         className={`weather-card ${inView ? "project-fade" : ""}`}
       >
-        <img src={weather} alt="weather alerts" />
+        {/* <img src={weather} alt="weather alerts" /> */}
         <div className="weather-button-wrap">
           <button
             className="projects-btn"
@@ -166,7 +166,7 @@ const Projects = () => {
         ref={projectRef}
         className={`woodshop-card ${inView ? "project-fade" : ""}`}
       >
-        <img src={woodshop} alt="barbershop in Tallahassee FL" />
+        {/* <img src={woodshop} alt="barbershop in Tallahassee FL" /> */}
         <div className="woodshop-button-wrap">
           <button
             className="projects-btn"
