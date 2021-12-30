@@ -7,7 +7,7 @@ const Main = () => {
   return (
     <div className='main'>
       <About/>
-      {/* <Projects /> */}
+      <Projects />
       {/* <Contact/> */}
     </div>
   );
