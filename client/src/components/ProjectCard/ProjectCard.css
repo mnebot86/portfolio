@@ -48,6 +48,7 @@
   font-weight: bold;
 }
 
+
 @media screen and (max-width: 767px) {
   .project-card-img-text-wrap {
     display: block;

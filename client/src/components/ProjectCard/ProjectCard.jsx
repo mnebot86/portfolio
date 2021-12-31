@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import IconContainer from "../IconContainer/IconContainer";
 import "./ProjectCard.css";
 
 const ProjectCard = ({ works }) => {
@@ -14,9 +16,19 @@ const ProjectCard = ({ works }) => {
                 <h2>{work.title}</h2>
                 <p>{work.description}</p>
               </div>
+              <IconContainer icons={work.icons} />
               <div className="project-card-btn-container">
-                <button className="project-card-btn">Live Site</button>
-                <button className="project-card-btn">GitHub</button>
+                {work.video ? (
+                  <button className="project-card-btn">Video</button>
+                ) : (
+                  <a href={work.site} target="_blank">
+                    <button className="project-card-btn">Live Site</button>
+                  </a>
+                )}
+
+                <a href={work.github} target="_blank">
+                  <button className="project-card-btn">GitHub</button>
+                </a>
               </div>
             </div>
           </div>

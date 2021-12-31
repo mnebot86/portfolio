@@ -1,8 +1,27 @@
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
+
 import woodShop from "../../asset/Project/woodshop.png";
 import weather from "../../asset/Project/weather-together.png";
 import gnome from "../../asset/Project/gnome.png";
 import barber from "../../asset/Project/barbershop.png";
+
+import weatherVideo from '../../asset/video/weatherTogether.mp4'
+
+import api from '../../asset/icons/api.png'
+import css from '../../asset/icons/css.svg'
+import firebase from '../../asset/icons/firebase.svg'
+import git from '../../asset/icons/git.svg'
+import github from '../../asset/icons/github.svg'
+import heroku from '../../asset/icons/heroku.svg'
+import jwt from '../../asset/icons/jwt.svg'
+import mongoDB from '../../asset/icons/mongoDB.svg'
+import netlify from '../../asset/icons/netlify.png'
+import node from '../../asset/icons/node.svg'
+import rails from '../../asset/icons/rails.svg'
+import react from '../../asset/icons/react.svg'
+import seo from '../../asset/icons/seo.png'
+
+
 
 import "./Projects.css";
 
@@ -16,6 +35,7 @@ const works = [
     site: "https://thewoodshop.club",
     video: null,
     github: "https://github.com/pearllumi-developer/the-wood-shop",
+    icons: [netlify, react, seo, css, git, github],
   },
   {
     title: "Weather-Together",
@@ -23,8 +43,9 @@ const works = [
       "This site was built with a team for a Hackathon, held by the U.S. Census. The idea was to give a way for neighbors to help each other during weather emergencies",
     img: weather,
     site: null,
-    video: null,
+    video: weatherVideo,
     github: "https://github.com/ariellekatherine92/product-club-front-end",
+    icons: [netlify, react, firebase, api],
   },
   {
     title: "Gnome-A-zon",
@@ -34,6 +55,7 @@ const works = [
     video: null,
     site: "https://gnome-a-zon.netlify.app/",
     github: "https://github.com/mnebot86/Gnome-A-zon",
+    icons: [mongoDB, react, node, jwt],
   },
   {
     title: "TheBarberShop",
@@ -43,6 +65,7 @@ const works = [
     site: null,
     video: null,
     github: "https://github.com/mnebot86/TheBarbershop",
+    icons: [react, rails, heroku ,jwt]
   },
 ];
 
