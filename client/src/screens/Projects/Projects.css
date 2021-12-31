@@ -1,0 +1,21 @@
+img {
+  width: 100%;
+}
+
+.project-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem 0;
+}
+
+.project-page h1 {
+  color:#FFC107;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(2.1rem, 4vw, 60rem);
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
