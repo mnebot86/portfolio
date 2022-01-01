@@ -1,5 +1,6 @@
 .project-card-container {
   margin-bottom: 5vh;
+  position: relative;
 }
 
 /* change to column for mobile */

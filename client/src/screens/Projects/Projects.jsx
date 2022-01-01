@@ -5,26 +5,23 @@ import weather from "../../asset/Project/weather-together.png";
 import gnome from "../../asset/Project/gnome.png";
 import barber from "../../asset/Project/barbershop.png";
 
-import weatherVideo from '../../asset/video/weatherTogether.mp4'
+import weatherVideo from "../../asset/video/weatherTogether.mp4";
 
-import api from '../../asset/icons/api.png'
-import css from '../../asset/icons/css.svg'
-import firebase from '../../asset/icons/firebase.svg'
-import git from '../../asset/icons/git.svg'
-import github from '../../asset/icons/github.svg'
-import heroku from '../../asset/icons/heroku.svg'
-import jwt from '../../asset/icons/jwt.svg'
-import mongoDB from '../../asset/icons/mongoDB.svg'
-import netlify from '../../asset/icons/netlify.png'
-import node from '../../asset/icons/node.svg'
-import rails from '../../asset/icons/rails.svg'
-import react from '../../asset/icons/react.svg'
-import seo from '../../asset/icons/seo.png'
-
-
+import api from "../../asset/icons/api.png";
+import css from "../../asset/icons/css.svg";
+import firebase from "../../asset/icons/firebase.svg";
+import git from "../../asset/icons/git.svg";
+import github from "../../asset/icons/github.svg";
+import heroku from "../../asset/icons/heroku.svg";
+import jwt from "../../asset/icons/jwt.svg";
+import mongoDB from "../../asset/icons/mongoDB.svg";
+import netlify from "../../asset/icons/netlify.png";
+import node from "../../asset/icons/node.svg";
+import rails from "../../asset/icons/rails.svg";
+import react from "../../asset/icons/react.svg";
+import seo from "../../asset/icons/seo.png";
 
 import "./Projects.css";
-
 
 const works = [
   {
@@ -65,7 +62,7 @@ const works = [
     site: null,
     video: null,
     github: "https://github.com/mnebot86/TheBarbershop",
-    icons: [react, rails, heroku ,jwt]
+    icons: [react, rails, heroku, jwt],
   },
 ];
 
@@ -73,7 +70,7 @@ const Projects = () => {
   return (
     <div className="project-page">
       <h1>My Projects</h1>
-      <ProjectCard works={works}/>
+      <ProjectCard works={works} />
     </div>
   );
 };
