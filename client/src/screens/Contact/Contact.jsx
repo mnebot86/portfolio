@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { send } from "emailjs-com";
+import ContactForm from "../../components/ContactForm/ContactForm";
+
 import "./Contact.css";
 
 const Contact = () => {
   const [toSend, setToSend] = useState({
     from_name: "",
     to_email: "",
-    message: undefined,
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -33,37 +35,11 @@ const Contact = () => {
       });
   };
 
-  const { from_name, reply_to, message } = toSend;
 
   return (
     <div className="contact-page">
       <h1>Hello</h1>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="from_name"
-          value={from_name}
-          onChange={handleChange}
-          placeholder="Name"
-        />
-        <input
-          type="email"
-          name="reply_to"
-          value={reply_to}
-          onChange={handleChange}
-          placeholder="Email"
-        />
-        <textarea
-          name="message"
-          value={message}
-          id=""
-          cols="30"
-          rows="10"
-          onChange={handleChange}
-          placeholder="Leave a message..."
-        />
-        <button type="submit">Submit</button>
-      </form>
+    <ContactForm toSend={toSend} handleChange={handleChange} handleSubmit={handleSubmit}/>
     </div>
   );
 };
