@@ -1,6 +1,7 @@
 .project-card-container {
-  margin-bottom: 5vh;
+  margin-bottom: 8em;
   position: relative;
+  box-shadow: 0 10px 6px -6px #777;
 }
 
 /* change to column for mobile */
@@ -11,6 +12,10 @@
 .project-card-img-container,
 .project-card-text-container {
   width: clamp(25rem, 40vw, 200rem);
+}
+
+.project-card-img-container {
+  height: 100%;
 }
 
 .project-card-text-container {

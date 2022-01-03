@@ -1,9 +1,9 @@
-import React from 'react';
-
+import './ContactForm.css'
 const ContactForm = ({toSend, handleChange, handleSubmit}) => {
   
-  const { from_name, reply_to, message } = toSend;
+  const { from_name, reply_to } = toSend;
   return (
+    <div className='form box'>
     <form onSubmit={handleSubmit}>
       <input
           type="text"
@@ -11,6 +11,7 @@ const ContactForm = ({toSend, handleChange, handleSubmit}) => {
           value={from_name}
           onChange={handleChange}
           placeholder="Name"
+          required
         />
         <input
           type="email"
@@ -18,18 +19,19 @@ const ContactForm = ({toSend, handleChange, handleSubmit}) => {
           value={reply_to}
           onChange={handleChange}
           placeholder="Email"
+          required
         />
         <textarea
           name="message"
           value={undefined}
-          id=""
-          cols="30"
-          rows="10"
+          id='textarea'
           onChange={handleChange}
           placeholder="Leave a message..."
+          required
         />
-        <button type="submit">Submit</button>
+        <button className='contact-btn' type="submit">Submit</button>
     </form>
+</div>
   );
 };
 

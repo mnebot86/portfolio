@@ -33,12 +33,18 @@ const Contact = () => {
       .catch((err) => {
         console.log("FAILED...", err);
       });
+    
+      setToSend({
+        from_name: "",
+        to_email: "",
+        message: "",
+      });
   };
 
 
   return (
     <div className="contact-page">
-      <h1>Hello</h1>
+      <h1 className="contact-title">Contact</h1>
     <ContactForm toSend={toSend} handleChange={handleChange} handleSubmit={handleSubmit}/>
     </div>
   );
