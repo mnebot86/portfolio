@@ -76,7 +76,7 @@ video {
 
 .home-down-arrow {
   position: fixed;
-  top: 70vh;
+  top: 72vh;
   z-index: 100;
 }
 
@@ -87,7 +87,7 @@ video {
   cursor: pointer;
   opacity: 0;
   transform: translateY(0);
-  width: clamp(7rem,11vw, 20rem);
+  width: clamp(7rem,11vw, 15rem);
 }
 
 .clicked {
