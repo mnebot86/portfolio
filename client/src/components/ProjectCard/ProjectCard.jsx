@@ -14,7 +14,7 @@ const ProjectCard = ({ works }) => {
   return (
     <>
       {works.map((work, idx) => (
-        <div key={idx} className="project-card-container">
+        <div key={idx} className="project-card-container shadow">
           <div className="project-card-img-text-wrap">
             <div className="project-card-img-container">
               <img src={work.img} alt="" loading='lazy'/>
