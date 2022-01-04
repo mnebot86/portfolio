@@ -1,0 +1,36 @@
+a {
+  text-decoration: none;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  padding: 4em 0;
+  width: 100vw;
+}
+
+footer img {
+  width: clamp(5rem, 3vw, 10rem);
+  height: auto;
+  box-sizing: border-box;
+
+}
+
+.footer span {
+  color: #ffc107;
+  font-size: clamp(1.5rem, 1.5vw, 6rem);
+  font-family: 'Poppins', sans-serif; 
+}
+
+.footer a:first-child, footer img {
+  margin-bottom: 1.5em;
+}
+
+@media screen and (max-width: 767px) {
+  .footer {
+    flex-direction: column;
+  }
+}
