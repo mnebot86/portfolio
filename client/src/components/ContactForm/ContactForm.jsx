@@ -1,7 +1,7 @@
 import './ContactForm.css'
 const ContactForm = ({toSend, handleChange, handleSubmit}) => {
   
-  const { from_name, reply_to } = toSend;
+  const { from_name, reply_to, message } = toSend;
   return (
     <div className='form box'>
     <form onSubmit={handleSubmit}>
@@ -23,7 +23,7 @@ const ContactForm = ({toSend, handleChange, handleSubmit}) => {
         />
         <textarea
           name="message"
-          value={undefined}
+          value={message}
           id='textarea'
           onChange={handleChange}
           placeholder="Leave a message..."

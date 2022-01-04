@@ -7,7 +7,7 @@ import "./Contact.css";
 const Contact = () => {
   const [toSend, setToSend] = useState({
     from_name: "",
-    to_email: "",
+    reply_to: "",
     message: "",
   });
 
@@ -35,9 +35,9 @@ const Contact = () => {
       });
     
       setToSend({
-        from_name: "",
-        to_email: "",
-        message: "",
+        from_name: '',
+        reply_to: '',
+        message: ''
       });
   };
 
