@@ -12,10 +12,7 @@ background-size: cover;
 background-repeat: no-repeat;
 height: 100vh;
 position: relative;
-opacity: 0;
 width: 100vw;
-animation: fadeIn .5s ease-in-out  forwards;
-
 }
 
 .text-box {
