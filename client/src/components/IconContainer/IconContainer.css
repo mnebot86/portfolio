@@ -1,0 +1,15 @@
+.icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.icon-container img {
+  width: clamp(2rem,4vw,15rem);
+}
+
+@media screen and  (max-width: 1023px) {
+  .icon-container img {
+    margin: 2em 0;
+  }
+}
