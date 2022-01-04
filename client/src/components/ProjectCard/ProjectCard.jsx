@@ -17,7 +17,7 @@ const ProjectCard = ({ works }) => {
         <div key={idx} className="project-card-container">
           <div className="project-card-img-text-wrap">
             <div className="project-card-img-container">
-              <img src={work.img} alt="" />
+              <img src={work.img} alt="" loading='lazy'/>
             </div>
             <div className="project-card-text-container">
               <div className="project-card-title-description-wrap">
