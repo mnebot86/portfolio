@@ -77,9 +77,10 @@ video {
 .home-down-arrow img {
   animation: arrowFadeIn 1s ease-in 2s forwards,
   bouncing-arrow .5s ease-in .5s infinite  alternate ;
+  cursor: pointer;
   opacity: 0;
-  width: clamp(7rem,11vw, 20rem);
   transform: translateY(0);
+  width: clamp(7rem,11vw, 20rem);
 }
 
 .clicked {
