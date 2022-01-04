@@ -1,6 +1,7 @@
 .project-card-container {
-  margin-bottom: 8em;
+  margin-bottom: 10rem;
   position: relative;
+  -webkit-box-shadow: 0 10px 6px -6px #777;
   box-shadow: 0 10px 6px -6px #777;
 }
 
