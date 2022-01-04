@@ -69,7 +69,7 @@ const works = [
 const Projects = () => {
   return (
     <div className="project-page">
-      <h1>My Projects</h1>
+      <h1 id='projects' >My Projects</h1>
       <ProjectCard works={works} />
     </div>
   );

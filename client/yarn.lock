@@ -11635,6 +11635,11 @@
   "resolved" "https://registry.npmjs.org/universalify/-/universalify-2.0.0.tgz"
   "version" "2.0.0"
 
+"universalsmoothscroll@^5.0.0":
+  "integrity" "sha512-AdCaOoEuI4aWKypJmT1TeTf0TuCdmOrEw6c+FEicJ4ujXepuC3WEIiw3BhtKad5pTasQvFwLBZmHwf+dI4tqFA=="
+  "resolved" "https://registry.npmjs.org/universalsmoothscroll/-/universalsmoothscroll-5.0.0.tgz"
+  "version" "5.0.0"
+
 "unpipe@~1.0.0", "unpipe@1.0.0":
   "integrity" "sha1-sr9O6FFKrmFltIF4KdIbLvSZBOw="
   "resolved" "https://registry.npmjs.org/unpipe/-/unpipe-1.0.0.tgz"

@@ -43,8 +43,8 @@ const Contact = () => {
 
 
   return (
-    <div className="contact-page">
-      <h1 className="contact-title">Contact</h1>
+    <div  className="contact-page">
+      <h1 id='contact' className="contact-title">Contact</h1>
     <ContactForm toSend={toSend} handleChange={handleChange} handleSubmit={handleSubmit}/>
     </div>
   );

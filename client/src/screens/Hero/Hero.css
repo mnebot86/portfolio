@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: center;
   min-height: 100%;
-  overflow: hidden;
+  overflow-y: hidden;
   position: relative;
   width: 100vw;
 }
@@ -23,6 +23,7 @@
   opacity: 1;
   text-align: center;
   width: 100vw;
+  overflow-y: hidden;
 }
 
 

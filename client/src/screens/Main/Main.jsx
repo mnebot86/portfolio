@@ -1,3 +1,4 @@
+import Navbar from '../../components/Navbar/Navbar';
 import About from '../About/About';
 import Projects from '../Projects/Projects';
 import Contact from '../Contact/Contact';
@@ -7,6 +8,7 @@ import './Main.css'
 const Main = () => {
   return (
     <div className='main'>
+      <Navbar />
       <About/>
       <Projects />
       <Contact/>

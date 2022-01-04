@@ -17,7 +17,7 @@ const history = useHistory();
 
   return (
     <div className="home-screen">
-      <video autoPlay muted loop id="hero-bg">
+      <video autoPlay muted loop id="hero-bg" preload='auto' playsInline>
         <source src={heroBg} type="video/mp4" />
         City of Providence, Rhode Island
       </video>

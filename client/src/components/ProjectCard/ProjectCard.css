@@ -11,7 +11,7 @@
 
 .project-card-img-container,
 .project-card-text-container {
-  width: clamp(25rem, 40vw, 200rem);
+  width: clamp(32rem, 40vw, 200rem);
 }
 
 .project-card-img-container {
