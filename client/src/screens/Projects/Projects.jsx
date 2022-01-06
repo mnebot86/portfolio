@@ -6,7 +6,7 @@ import gnome from "../../asset/Project/gnome.png";
 import barber from "../../asset/Project/barbershop.png";
 
 import weatherVideo from "../../asset/video/weatherTogether.mp4";
-import barberVideo from '../../asset/video/barberShopVideo.mp4'
+import barberVideo from "../../asset/video/barberShopVideo.mp4";
 
 import api from "../../asset/icons/api.png";
 import css from "../../asset/icons/css.svg";
@@ -70,8 +70,10 @@ const works = [
 const Projects = () => {
   return (
     <div className="project-page">
-      <h1 id='projects' >My Projects</h1>
-      <ProjectCard works={works} />
+      <h1 id="projects">My Projects</h1>
+      {works.map((work, idx) => (
+        <ProjectCard key={`project-${idx}`} {...work} />
+      ))}
     </div>
   );
 };
