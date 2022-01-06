@@ -16,7 +16,6 @@ const ProjectCard = ({
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleVideoModal = () => {
-    console.log(isOpen)
     setIsOpen(prev => !prev);
   };
 
