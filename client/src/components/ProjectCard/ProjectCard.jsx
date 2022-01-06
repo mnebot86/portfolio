@@ -21,7 +21,7 @@ const ProjectCard = ({
 
   return (
     <>
-    <div className="project-card-container shadow position">
+    <div className="project-card-container shadow" style={{position: 'relative'}}>
           <div className="project-card-img-text-wrap">
             <div className="project-card-img-container">
               <img src={img} alt="" loading='lazy'/>
