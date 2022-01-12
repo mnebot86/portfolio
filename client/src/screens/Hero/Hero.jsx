@@ -8,6 +8,8 @@ const Hero = () => {
 const [click, setClick] = useState(false);
 const history = useHistory();
 
+
+
   const handleClick = () => {
     setClick((prev) => !prev)
     setTimeout(() =>{

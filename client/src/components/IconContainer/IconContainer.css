@@ -5,7 +5,7 @@
 }
 
 .icon-container img {
-  width: clamp(2rem,4vw,15rem);
+  width: clamp(5rem,4vw,15rem);
 }
 
 @media screen and  (max-width: 1023px) {

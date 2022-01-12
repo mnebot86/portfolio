@@ -29,6 +29,8 @@ padding: 1.2rem 2rem;
 box-sizing: border-box;
 margin-bottom: 3em;
 font-size: clamp(1.5rem, 1.5vw, 3rem);
+font-family: "Poppins", sans-serif;
+
 }
 
 #textarea {
@@ -43,6 +45,8 @@ font-size: clamp(1.5rem, 1.5vw, 3rem);
   font-weight: bold;
   margin: 1em auto 0 auto; 
   width: fit-content;
+  font-family: "Poppins", sans-serif;
+
 }
 
 @media screen and (max-width: 767px) {

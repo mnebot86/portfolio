@@ -1,9 +1,9 @@
-.project-card-container {
-  margin-bottom: 8em;
-  position: relative;
-  box-shadow: 0 10px 6px -6px #777;
+.shadow {
+margin-bottom: 10rem;
+-webkit-box-shadow: 0 10px 6px -6px #777;
+box-shadow: 0 10px 6px -6px #777;
+  
 }
-
 /* change to column for mobile */
 .project-card-img-text-wrap {
   display: flex;
@@ -52,6 +52,8 @@
   font-size: clamp(1.2rem, 1vw, 20rem);
   padding: 0.5em;
   font-weight: bold;
+  font-family: "Poppins", sans-serif;
+
 }
 
 
