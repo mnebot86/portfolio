@@ -4,6 +4,12 @@ import VideoModal from "../../components/VideoModal/VideoModal";
 
 import "./ProjectCard.css";
 
+const projectCardStyle = {
+  boxShadow: '0 10px 6px -6px #777',
+  marginBottom: '10rem',
+  position: 'relative',
+}
+
 const ProjectCard = ({
   title,
   img,
@@ -21,7 +27,7 @@ const ProjectCard = ({
 
   return (
     <>
-    <div className="project-card-container shadow" style={{position: 'relative'}}>
+    <div className="project-card-container" style={projectCardStyle}>
           <div className="project-card-img-text-wrap">
             <div className="project-card-img-container">
               <img src={img} alt="" loading='lazy'/>
