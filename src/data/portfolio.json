@@ -1,0 +1,28 @@
+{
+	"portfolio": [
+		{
+			"cover": "/portfolio/tryDriver/try-driver.png",
+			"title": "Driver Technologies",
+			"description": "Gatsby, Scss, JavaScript, Enzyme",
+			"url": "https://www.drivertechnologies.com"
+		},
+		{
+			"cover": "/portfolio/driverCloud/driver-cloud.png",
+			"title": "DriverCloud",
+			"description": "React, Scss, JavaScript, Enzyme, Playwright",
+			"url": "https://cloud.drivertechnologies.com/"
+		},
+		{
+			"cover": "/portfolio/jetApp/jet-app.png",
+			"title": "Jet App",
+			"description": "Expo React Native, TypeScript",
+			"url": "https://github.com/mnebot86/jetAPP"
+		},
+		{
+			"cover": "/portfolio/jetBackend/jet-backend.png",
+			"title": "Jet Backend",
+			"description": "Node, TypeScript, Express, MongoDb, Socket.io, Jest, SuperTest",
+			"url": "https://github.com/mnebot86/jetBackend"
+		}
+	]
+}
